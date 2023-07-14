@@ -1,0 +1,75 @@
+/*For copy-paste to https://[cyberpanel.address.com]/base/design page */
+
+/* Card-button fix for long action names //rams */
+.tile-box-shortcut .tile-header {
+    padding: 0em 0 0 2em;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/*Logo fix*/
+
+#header-logo > a[title="CyberPanel"]{
+	background: none;
+	font-weight: 600;
+	text-indent: 5px;
+	text-align: left;
+}
+
+#header-logo > a[title="CyberPanel"] > i{
+	font-style: normal;
+}
+
+#header-logo > a[title="CyberPanel"] > span {
+	font-size: x-small;
+	display: block;
+	font-weight: normal;
+}
+
+/* Avoid (soft) word wrap in long item names of sidebar in RU/BY lang //rams */
+#page-sidebar{
+    width: 300px; /* пункт: Редактирование конфигурации PHP */
+}
+
+@media only screen and (min-width: 56.25em){
+    #page-content {
+        margin-left: 300px;
+    }
+}
+
+#sidebar-menu li a{
+	display: flex;
+	line-height: 150%;
+	align-items: center;
+	color: black;
+}
+
+/* Hide top menu items //rams */
+#header-nav-right > a[href*="youtube"],
+#header-nav-right > a[title*="Community"],
+#header-nav-right > a[title*="Support"],
+
+/* Hide left menu items */
+#sidebar-menu-item-server-ip-address,
+#sidebar-menu-item-wordpress,
+#sidebar-menu-item-cloudlinux,
+#sidebar-menu-item-dns,
+#sidebar-menu-item-root-file-manager,
+#sidebar-menu-item-containerization,
+#sidebar-menu-item-connect,
+#sidebar-menu-item-community{
+    display: none !important;
+}
+
+/* Remove new badges */
+#sidebar-menu li span.bs-label.badge-yellow{display:none}
+
+/* Remove page loader */
+#loading{height:0%;overflow:hidden}
+
+/* Replace Raleway font with Open Sans */
+#page-title>h2,#page-title>p,h1,h2,h3,h4,h5,h6{font-family:inherit}
+
+/* Apply flexbox to panels */
+.col-md-3.panel-body,.col-md-6.panel-body{display:flex;justify-content:flex-start;align-items:center;padding:15px 0}
