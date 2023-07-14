@@ -1,5 +1,10 @@
 # CyberPanel Design Tweaks
 
+## Последняя версия всех твиков - в CSS файле:
+→ **css/all-tweaks.css**: https://github.com/dimasites/cyberpanel-design-tweaks/blob/dimasites-patch-1/css/all-tweaks.css
+
+---
+
 > Tweak the look of CyberPanel to your liking by adding CSS snippets to your custom CSS on the Design page.
 
 ## Tweaks
