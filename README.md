@@ -1,124 +1,27 @@
-# CyberPanel Design Tweaks
+# CyberPanel настройки внешнего вида (Design Tweaks)
+
+Из коробки панель свёрстана так, что на русском языке многое разъезжается или выглядит криво. Настало время исправить это за пару кликов и один копипаст!
 
 ## Последняя версия всех твиков - в CSS файле:
 → **css/all-tweaks.css**: https://github.com/dimasites/cyberpanel-design-tweaks/blob/dimasites-patch-1/css/all-tweaks.css
 
----
+Выглядеть будет вот так:
+![image](https://github.com/dimasites/cyberpanel-design-tweaks/assets/5102558/328de663-1d91-4fd4-b9da-a6f15edd4ccd)
+(сравните с таким же экраном из коробки и всё станет ясно)
 
-> Tweak the look of CyberPanel to your liking by adding CSS snippets to your custom CSS on the Design page.
+Если коротко, что сделано: выключенн показ (просто скрыты через CSS) платные функции, ссылки на ютуб-каналы и т.п. чтобы панель выглядела немного больше похожей на готовый рабочий продукт (чем она и является), а не на тестовый проект энтузиастов-экспериментаторов.
 
-## Tweaks
+### Как использовать
+Просто добавить через админку [CSS-код из этого файла](https://github.com/dimasites/cyberpanel-design-tweaks/blob/dimasites-patch-1/css/all-tweaks.css) в меню Design, и он инкапсулируется в эту же самую админку:
 
-### Remove page loader
+![photo_2023-07-24_21-36-57](https://github.com/dimasites/cyberpanel-design-tweaks/assets/5102558/3d7615b6-e09d-451f-9e7f-e98d48acaf7e)
 
-```css
-/* Remove page loader */
-#loading{height:0%;overflow:hidden}
-```
+### Как отключить
+Чтобы отключить, код просто надо стереть код в меню Design или закомментировать
 
-### Remove new badges
+### Часто задаваемые вопросы
+Вопрос: А где логотип CyberPanel?
+Ответ: Нн был из коробки растровый (.png вместо .svg), тёк пикселями и это меня раздражало, вот я его и скрыл. Кому надо - можете вернуть, просто отключив соответствующую секцию в CSS.
 
-```css
-/* Remove new badges */
-#sidebar-menu li span.bs-label.badge-yellow{display:none}
-```
-
-### Remove menu icon wiggle
-
-```css
-/* Remove menu icon wiggle */
-#page-sidebar li a:hover .glyph-icon{animation-name:none}
-```
-
-### Replace Raleway font with Open Sans
-
-```css
-/* Replace Raleway font with Open Sans */
-#page-title>h2,#page-title>p,h1,h2,h3,h4,h5,h6{font-family:inherit}
-```
-
-### Apply flexbox to panels
-
-```css
-/* Apply flexbox to panels */
-.col-md-3.panel-body,.col-md-6.panel-body{display:flex;justify-content:flex-start;align-items:center;padding:15px 0}
-```
-
-### Dark mode alerts
-
-```css
-/* Dark mode alerts */
-.alert-success,.alert-success a,.parsley-success{background-color:rgba(46,204,113,.1);border-left:4px solid #2ecc71;color:#fff}.alert-danger,.alert-danger a,.danger,.parsley-error{background-color:rgba(231,76,60,.1);border-left:4px solid #e74c3c;color:#fff}
-```
-
-### Style server IP like normal
-
-```css
-/* Style server IP like normal */
-#sidebar-menu-item-server-ip-address span{font-weight:400!important;color:inherit!important}
-```
-
-### Hide menu items
-
-Remove menu items you want to keep from this list.
-
-```css
-/* Hide menu items */
-#sidebar-menu-item-server-ip-address,
-#sidebar-menu-item-dashboard,
-#sidebar-menu-item-version-management,
-#sidebar-menu-item-design,
-#sidebar-menu-item-connect,
-#sidebar-menu-item-community,
-#sidebar-menu-item-users,
-#sidebar-menu-item-wordpress,
-#sidebar-menu-item-websites,
-#sidebar-menu-item-packages,
-#sidebar-menu-item-databases,
-#sidebar-menu-item-email,
-#sidebar-menu-item-ftp,
-#sidebar-menu-item-backup,
-#sidebar-menu-item-incremental-backup,
-#sidebar-menu-item-ssl,
-#sidebar-menu-item-root-file-manager,
-#sidebar-menu-item-cloudlinux,
-#sidebar-menu-item-containerization,
-#sidebar-menu-item-docker,
-#sidebar-menu-item-tuning,
-#sidebar-menu-item-server-status,
-#sidebar-menu-item-php,
-#sidebar-menu-item-logs,
-#sidebar-menu-item-security,
-#sidebar-menu-item-mail-settings,
-#sidebar-menu-item-manage-services,
-#sidebar-menu-item-plugins {
-    display: none !important;
-}
-```
-
-## Contributing
-
-Found a bug? Anything you would like to ask, add or change? Please open an issue so we can talk about it.
-
-Pull requests are welcome. Please try to match the current code formatting.
-
-## Development
-
-### Requirements
-
-- [NodeJS](https://nodejs.org/en/)
-
-### Installation
-
-1. `pnpm i`
-
-### Build CSS
-
-Command | Action
-:--- |:---
-`pnpm gulp` | Build once
-`pnpm gulp watch` | Build continuously
-
-## Author
-
-[Tim Brugman](https://github.com/Brugman)
+### Поддержка и участие
+Ставьте звёзды, делайте форки, скриншоты кривой вёрстки и кидайте issue - я планирую поддерживать код в актуальном состоянии. и в результате "починить вёрстку" панели под русский язык (и другие языки, в которых фразы длиннее, чем английские) насколько это возможно. А может, это всё перерастет в "тему" для CyberPanel или PR в основную верстку... Давайте сделаем любимую панель более юзабельной, имхо - оно того стоит!
